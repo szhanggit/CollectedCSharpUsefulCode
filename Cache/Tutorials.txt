@@ -1,0 +1,2 @@
+https://code-maze.com/aspnetcore-in-memory-caching/
+https://code-maze.com/aspnetcore-distributed-caching/

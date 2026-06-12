@@ -1,0 +1,27 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "TXC.Proto.Tenant";
+
+import "common.proto";
+import "google/protobuf/wrappers.proto";
+
+service TenantConfig {
+	rpc GetTenantConfig (GetTenantConfigRequest) returns (ProtoBaseResponse);
+}
+
+message GetTenantConfigRequest {
+	int32 tenant_id = 1;
+}
+
+message GetTenantConfigResponse {
+	repeated GetTenantConfigItem tenant_config_items = 1;
+}
+
+message GetTenantConfigItem {
+	int32 tenant_id = 1;
+	google.protobuf.StringValue config_type = 2;
+	google.protobuf.StringValue config_name = 3;
+	google.protobuf.StringValue version = 4;
+	google.protobuf.StringValue value = 5;
+	google.protobuf.StringValue comment = 6;
+}

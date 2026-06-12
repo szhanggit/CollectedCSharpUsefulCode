@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32414.318
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consumer.Api", "Consumer.Api\Consumer.Api.csproj", "{01307590-B404-4164-A559-85355D9EE58C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TXC.Common.CacheManagement", "TXC.Common.CacheManagement\TXC.Common.CacheManagement.csproj", "{980C1998-67DF-4EC0-A436-B7642C259C03}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{01307590-B404-4164-A559-85355D9EE58C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01307590-B404-4164-A559-85355D9EE58C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01307590-B404-4164-A559-85355D9EE58C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01307590-B404-4164-A559-85355D9EE58C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{980C1998-67DF-4EC0-A436-B7642C259C03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{980C1998-67DF-4EC0-A436-B7642C259C03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{980C1998-67DF-4EC0-A436-B7642C259C03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{980C1998-67DF-4EC0-A436-B7642C259C03}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7664F3DF-AE39-4448-BE21-CB507C81AE24}
+	EndGlobalSection
+EndGlobal

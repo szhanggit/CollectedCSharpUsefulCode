@@ -1,0 +1,2 @@
+1. Cache file content.
+2. Cache loading content.

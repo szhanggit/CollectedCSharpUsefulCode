@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<PackageReference Include="Dapper" Version="2.0.123" />
+	<PackageReference Include="MediatR" Version="9.0.0" />
+	<PackageReference Include="Microsoft.Azure.SqlDatabase.ElasticScale.Client" Version="2.3.0" />
+	<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+	<PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+    <PackageReference Include="TXC.Common.Services" Version="1.0.0.16" />
+	<PackageReference Include="TXC.Common.Data" Version="1.0.0.22" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\Domain.csproj" />
+    <ProjectReference Include="..\TXC.Proto.Tenant\TXC.Proto.Tenant.csproj" />
+  </ItemGroup>	
+	
+</Project>
