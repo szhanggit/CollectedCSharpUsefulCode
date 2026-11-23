@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{08A2877E-E72B-461B-BED1-0038D1EC8192}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ParkingLotApp</RootNamespace>
+    <AssemblyName>ParkingLotApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ParkingLogApp.BaseCommand\ParkingLogApp.BaseCommand.csproj">
+      <Project>{89ebeabd-29d4-4d65-9a12-142d8c99242a}</Project>
+      <Name>ParkingLogApp.BaseCommand</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ParkingLogApp.CreateCommand\ParkingLogApp.CreateCommand.csproj">
+      <Project>{db529dce-a8e4-4283-b713-41d47c2b3ab7}</Project>
+      <Name>ParkingLogApp.CreateCommand</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ParkingLogApp.ExitCommand\ParkingLogApp.ExitCommand.csproj">
+      <Project>{d5421537-eba7-45f4-a22a-e9820b9368b2}</Project>
+      <Name>ParkingLogApp.ExitCommand</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ParkingLogApp.LeaveCommand\ParkingLogApp.LeaveCommand.csproj">
+      <Project>{a1e8e2d9-03d8-4495-870c-1d264bd4078b}</Project>
+      <Name>ParkingLogApp.LeaveCommand</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ParkingLogApp.Lib\ParkingLogApp.Lib.csproj">
+      <Project>{b61f6a7a-3946-4138-994a-8e6ecea72924}</Project>
+      <Name>ParkingLogApp.Lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ParkingLogApp.Model\ParkingLogApp.Model.csproj">
+      <Project>{c40b01be-e688-492c-9876-7c3830cfe84f}</Project>
+      <Name>ParkingLogApp.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ParkingLogApp.ParkCommand\ParkingLogApp.ParkCommand.csproj">
+      <Project>{41b181c3-4643-48b9-ba05-65502f55040e}</Project>
+      <Name>ParkingLogApp.ParkCommand</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ParkingLogApp.SearchCarPlatesByColorCommand\ParkingLogApp.SearchCarPlatesByColorCommand.csproj">
+      <Project>{a882370f-3c1f-40d3-8118-f0b32eba27f7}</Project>
+      <Name>ParkingLogApp.SearchCarPlatesByColorCommand</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ParkingLogApp.SearchSlotByCarPlateCommand\ParkingLogApp.SearchSlotByCarPlateCommand.csproj">
+      <Project>{8beb3b4e-38e6-4611-8691-244e972e9e44}</Project>
+      <Name>ParkingLogApp.SearchSlotByCarPlateCommand</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ParkingLogApp.SearchSlotByColorCommand\ParkingLogApp.SearchSlotByColorCommand.csproj">
+      <Project>{5fc7e9c3-8fa3-4376-8a78-a325fc250775}</Project>
+      <Name>ParkingLogApp.SearchSlotByColorCommand</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ParkingLogApp.StatusCommand\ParkingLogApp.StatusCommand.csproj">
+      <Project>{d9f88972-7145-4ca3-aa49-06360c9469a7}</Project>
+      <Name>ParkingLogApp.StatusCommand</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TestingPlan.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
