@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EnumEx", "EnumEx\EnumEx.csproj", "{8FC42D88-57DB-4365-8E7A-D67FE4430273}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BOL", "BOL\BOL.csproj", "{4E2C09F5-3797-4C18-97D6-21E3BB40D76C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnumWithProperty", "EnumWithProperty\EnumWithProperty.csproj", "{EB9CE160-991E-49E6-A1E8-6EC2F3C8D94D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8FC42D88-57DB-4365-8E7A-D67FE4430273}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FC42D88-57DB-4365-8E7A-D67FE4430273}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FC42D88-57DB-4365-8E7A-D67FE4430273}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FC42D88-57DB-4365-8E7A-D67FE4430273}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E2C09F5-3797-4C18-97D6-21E3BB40D76C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E2C09F5-3797-4C18-97D6-21E3BB40D76C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E2C09F5-3797-4C18-97D6-21E3BB40D76C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E2C09F5-3797-4C18-97D6-21E3BB40D76C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB9CE160-991E-49E6-A1E8-6EC2F3C8D94D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB9CE160-991E-49E6-A1E8-6EC2F3C8D94D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB9CE160-991E-49E6-A1E8-6EC2F3C8D94D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB9CE160-991E-49E6-A1E8-6EC2F3C8D94D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8D402BC1-B6DF-4CBA-B871-AC102E51DC56}
+	EndGlobalSection
+EndGlobal
