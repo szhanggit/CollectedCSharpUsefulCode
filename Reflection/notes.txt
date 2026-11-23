@@ -1,0 +1,6 @@
+typeof();
+getType();
+Assembly.Load();
+Assembly.LoadFrom();
+Activator.CreateInstance();
+Invoke();
