@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<Classmate>
+  <Jacky Math="75" Chinese="45" />
+  <ALian Math="90" Chinese="95" />
+  <XiaoLuo Math="50" Chinese="50" />
+  <Bill Math="60" Chinese="65" />
+  <Yao Math="65" Chinese="96" />
+  <Andy Math="86" Chinese="88" />
+  <Jane Math="85" Chinese="55" />
+</Classmate>
