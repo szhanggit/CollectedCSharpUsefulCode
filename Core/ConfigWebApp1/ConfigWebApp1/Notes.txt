@@ -1,0 +1,1 @@
+﻿https://www.c-sharpcorner.com/article/reading-values-from-appsettings-json-in-asp-net-core/

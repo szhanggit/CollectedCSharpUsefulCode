@@ -1,0 +1,23 @@
+ConfigApp:
+	ConfigApp		Get the config file to build IConfiguration config and assign values into class.
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile($"appsettings.{environmentName}.json", optional: false);
+
+	ConsoleApp2		It is similiar with the one above with nicer structure.
+
+	ConsoleApp3		var builder = new ConfigurationBuilder().AddJsonFile($"appsettings.json", true, true);	var emailHost = config["Smtp:Host"];
+
+	ConsoleApp4		var Item1 = config["Smtp:Deeper:Item1"];
+
+	ConsoleApp5		Use JsonTextReader; Set and get environment variables.
+	
+
+ConfigWebApp1:		WebApi, get settings for a class.		IOptions<MySettingsModel> app;	Bind part of settings with a class. 
+
+
+ConfigWebApp2:		Similiar with above.
+
+
+ConfigWebApp3:		IOptions<ShardConfiguration> config
+

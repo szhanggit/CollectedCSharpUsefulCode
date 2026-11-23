@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "SpecFlow.Test": {
+      "commandName": "project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Staging"
+      }
+    },
+    "WSL": {
+      "commandName": "WSL2",
+      "distributionName": ""
+    }
+  }
+}
