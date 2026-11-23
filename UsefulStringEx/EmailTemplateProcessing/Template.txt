@@ -1,0 +1,1 @@
+{Name}{SMSGreetings}{PRODUCT_NAME}，請於{END_DATE}前開啟下方完整券樣（密碼{ShortUrlAuthCode}）至櫃台掃碼兌換。{ShortUrl}
