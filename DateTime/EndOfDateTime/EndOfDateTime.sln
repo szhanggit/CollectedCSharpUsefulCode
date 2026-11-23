@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.757
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EndOfDateTime", "EndOfDateTime\EndOfDateTime.csproj", "{C3F6A712-1C86-498D-BB11-A1212EB3C157}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTimeBOL", "DataTimeBOL\DataTimeBOL.csproj", "{E992A8F7-4F8A-403C-8922-3F86B94F8EDE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateTimeFormat", "DateTimeFormat\DateTimeFormat.csproj", "{4FFA81F8-62E1-46C3-BFC8-46D21AA6D340}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UTCHelperEx", "UTCHelperEx\UTCHelperEx.csproj", "{14C6734C-9A8F-4DCB-BD77-56BC11040FE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TryConvertExcelDateTimeEx", "TryConvertExcelDateTimeEx\TryConvertExcelDateTimeEx.csproj", "{29830E4F-9B40-46AA-8C10-40FB1617C8AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateTimeOffsetEx", "DateTimeOffsetEx\DateTimeOffsetEx.csproj", "{EB647B7B-3D4E-48E5-AA49-0632DA57D7EF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C3F6A712-1C86-498D-BB11-A1212EB3C157}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3F6A712-1C86-498D-BB11-A1212EB3C157}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3F6A712-1C86-498D-BB11-A1212EB3C157}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3F6A712-1C86-498D-BB11-A1212EB3C157}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E992A8F7-4F8A-403C-8922-3F86B94F8EDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E992A8F7-4F8A-403C-8922-3F86B94F8EDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E992A8F7-4F8A-403C-8922-3F86B94F8EDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E992A8F7-4F8A-403C-8922-3F86B94F8EDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FFA81F8-62E1-46C3-BFC8-46D21AA6D340}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FFA81F8-62E1-46C3-BFC8-46D21AA6D340}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FFA81F8-62E1-46C3-BFC8-46D21AA6D340}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FFA81F8-62E1-46C3-BFC8-46D21AA6D340}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14C6734C-9A8F-4DCB-BD77-56BC11040FE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14C6734C-9A8F-4DCB-BD77-56BC11040FE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14C6734C-9A8F-4DCB-BD77-56BC11040FE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14C6734C-9A8F-4DCB-BD77-56BC11040FE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29830E4F-9B40-46AA-8C10-40FB1617C8AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29830E4F-9B40-46AA-8C10-40FB1617C8AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29830E4F-9B40-46AA-8C10-40FB1617C8AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29830E4F-9B40-46AA-8C10-40FB1617C8AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB647B7B-3D4E-48E5-AA49-0632DA57D7EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB647B7B-3D4E-48E5-AA49-0632DA57D7EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB647B7B-3D4E-48E5-AA49-0632DA57D7EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB647B7B-3D4E-48E5-AA49-0632DA57D7EF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {03BAD7B6-AD95-49FA-A930-2158CA263F53}
+	EndGlobalSection
+EndGlobal
