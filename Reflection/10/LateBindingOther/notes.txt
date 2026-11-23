@@ -1,0 +1,12 @@
+**********************************************************************
+** Visual Studio 2017 Developer Command Prompt v15.6.4
+** Copyright (c) 2017 Microsoft Corporation
+**********************************************************************
+
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise>csc /out:Human.dl
+l /t:library Person.cs
+Microsoft(R) Visual C# 编译器 版本 2.7.0.62715 (db02128e)
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise>
