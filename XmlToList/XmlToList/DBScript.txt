@@ -1,0 +1,25 @@
+﻿CREATE TABLE [dbo].[CheckPara20210127]
+(
+[Id] [int] NOT NULL IDENTITY(1, 1) NOT FOR REPLICATION,
+[MessageId] [int] NULL,
+[MessageLocalId] [int] NULL,
+[Status] [int] NULL,
+[MissingTag] nvarchar(4000) NULL,
+[MissingVal] nvarchar(4000) NULL,
+[OrderNumber] varchar(100) NULL,
+PRIMARY KEY CLUSTERED ([Id] ASC),
+)
+GO
+
+
+
+alter table CheckPara20210127 add orderlineId int null
+alter table CheckPara20210127 add VoucherNumber varchar(100) null
+alter table CheckPara20210127 add OrderBeneficiaryInfoId int null
+alter table CheckPara20210127 add Email varchar(100) null
+
+alter table CheckPara20210127 add ClientName nvarchar(100) null
+alter table CheckPara20210127 add ProductCode varchar(100) null
+
+select * from CheckPara20210127 with(nolock)
+where [Status] in (1,3) AND MessageLocalId > 10 AND OrderNumber != ''
