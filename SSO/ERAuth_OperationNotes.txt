@@ -1,0 +1,144 @@
+Add an application:
+Application Manager -> Application List -> Create
+(After creating, you will get Name, Key)
+__________________________________________________________________
+Go to Mo Web web.config, find: 
+ERAuth.AppName = Name
+ERAuth.AppKey = Key
+__________________________________________________________________
+Add privilege:
+Application Manager -> Role Management -> Application Roles
+__________________________________________________________________
+Add menu:
+Application Manager -> Menu Management -> Application Menus -> Select an item -> check a role and click save.
+__________________________________________________________________
+Add resource list:
+Application Manager -> Resource Management -> Resource Management 
+__________________________________________________________________
+Add operation:
+Application Manager -> Operation Management -> Operation Management 
+__________________________________________________________________
+Permission setting:
+Application Manager -> Permission Management -> Permission Management  
+__________________________________________________________________
+Edit User Managerment
+User Management -> User List -> Find a user to edit App-> Check the app which you just created.
+__________________________________________________________________
+Identity Server Management -> Fill name, Realm, and ReplyTo. //Pay attention for the format. It must have http:// and end with /.
+__________________________________________________________________
+      <audienceUris>
+        <add value="http://moweb.testing.edenred.apacs/" />		//Pay attention for the format. It must have http:// and end with /.
+      </audienceUris>
+
+    <federationConfiguration>
+      <cookieHandler requireSsl="false" />
+      <wsFederation passiveRedirectEnabled="true" issuer="https://erauthdev.edenred.net/ERAuth.IdentityServer.Web/issue/wsfed" realm="http://moweb.testing.edenred.apacs/" requireHttps="true" signOutReply="http://moweb.testing.edenred.apacs/Default.aspx" />
+    </federationConfiguration>
+__________________________________________________________________
+Set multilanguage:
+copy zh-Cn and en under bin folder.
+
+
+
+Restart Mo Web and its Application Pool.
+
+
+
+
+
+
+    
+SELECT * FROM dbo.Menu WHERE AppId = 6 AND ParentId = 80
+
+
+
+
+SELECT * FROM dbo.Menu WHERE AppId = 7 AND ParentId = 2157
+
+
+INSERT INTO dbo.Menu
+        ( ParentId ,
+          Type ,
+          Name ,
+          DisplayName ,
+          SortIndex ,
+          Description ,
+          Url ,
+          Target ,
+          NeedTranslation ,
+          Tooltip ,
+          Enabled ,
+          AppId
+        )
+        SELECT 
+2164 ,
+          Type ,
+          Name ,
+          DisplayName ,
+          SortIndex ,
+          Description ,
+          Url ,
+          Target ,
+          NeedTranslation ,
+          Tooltip ,
+          Enabled ,
+          7
+FROM dbo.Menu WHERE AppId = 6 AND ParentId = 97
+
+
+
+
+
+    
+SELECT * FROM dbo.Role WHERE AppId = 6
+
+
+
+INSERT INTO dbo.Role
+        ( Name ,
+          DisplayName ,
+          Enabled ,
+          Description ,
+          IsGlobal ,
+          AppId
+        )
+SELECT Name ,
+          DisplayName ,
+          Enabled ,
+          Description ,
+          IsGlobal ,
+          7
+          FROM dbo.Role WHERE AppId =6
+
+INSERT INTO dbo.Operation
+(
+    Name,
+    DisplayName,
+    Description,
+    AppId
+)
+SELECT Name, DisplayName, Description, 7 FROM dbo.Operation WHERE AppId = 6
+
+INSERT INTO dbo.Resource
+(
+    ModuleId,
+    Name,
+    DisplayName,
+    Description,
+    AppId
+)
+SELECT ModuleId, Name, DisplayName, Description, 7 FROM dbo.Resource WHERE AppId = 6
+
+
+INSERT INTO dbo.Permission
+(
+    AppId,
+    RoleId,
+    OperationId,
+    ResourceId,
+    Description
+)
+SELECT 7, RoleId, OperationId, ResourceId, Description FROM dbo.Permission WHERE AppId = 6
+
+
+

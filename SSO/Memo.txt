@@ -1,0 +1,22 @@
+Find them in NuGet:
+ERAuth.ClientLib
+ERAuth.IdentityModel
+ERAuth.ServiceClient
+ERAuth.ServiceDataContract
+
+
+Create an application under Application Management in SSO.
+
+
+    <add key="ERAuth.AppName" value="MyTestAppWithSSO" />
+    <add key="ERAuth.AppKey" value="UwhVru8XjklYx2RpAuWZz5XpHslY0pHb0NRJd4x2xXo=" />
+    <add key="ERAuth.ServiceBaseUrl" value="https://txsso-test.preprod.edenred.net/ERAuth.ServiceHost/" />
+
+Add assembly 
+System.IdentityModel
+System.IdentityModel.services
+NuGet
+System.IdentityModel.Tokens.Jwt
+System.IdentityModel.Tokens.ValidatingIssuerNameRegistry		Install-Package System.IdentityModel.Tokens.ValidatingIssuerNameRegistry -Version 2.0.0
+
+Go to "Identity Server Management" to create new relying party:

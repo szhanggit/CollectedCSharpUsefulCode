@@ -1,0 +1,179 @@
+Add pfx into IIS:
+https://www.trustico.com/install/import/iis7/iis7-pfx-installation.php
+
+----------------------------------------------------------------------------------------------
+Show error detail:
+
+
+  <system.web>
+    <trust level="Full" originUrl=""  />
+    <customErrors mode="Off"/>
+  </system.web>
+
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\Config
+
+----------------------------------------------------------------------------------------------
+
+IIS Log
+In the big middle panel, there are three sections. ASP.NET; IIS; Management.
+Under IIS section, there is a Logging. You can find the IIS log path there.
+
+Choose a website in the left panel. Click 'Advanced Settings...' in the right panel. Keep the ID in the mind.
+Let's say if the ID is 9, the corresponding folder will be W3SVC9.
+
+----------------------------------------------------------------------------------------------
+https://help.globalscape.com/help/eft7-3/mergedProjects/insight/Changing_SSL_Certificate_in_IIS_Manager.htm
+
+----------------------------------------------------------------------------------------------
+Authentication
+Directory Browsing
+Logging
+.NET Trust Levels
+
+----------------------------------------------------------------------------------------------
+Sign off user
+Task manager -> Users -> SignOff
+
+----------------------------------------------------------------------------------------------
+Bring up windows job
+Go to Server Manager -> Dashboard.
+Tools -> Task Scheduler
+
+----------------------------------------------------------------------------------------------
+
+Add a user
+Computer Management -> Local Users and Groups -> Users -> do the action.
+
+Make a network shared folder
+Select a folder -> right click to choose properties -> select Sharing tab -> Choose Advanced -> do the action and set the permission.
+
+----------------------------------------------------------------------------------------------
+
+Install WCF
+Turn Windows features on or off
+https://help.genesys.com/cic/mergedProjects/wh_tr/mergedProjects/wh_tr_web_portal_marquee/desktop/activate_windows_communication_foundation_wcf.htm
+https://docs.microsoft.com/en-us/dotnet/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components
+
+https://stackoverflow.com/questions/12106011/system-security-cryptography-cryptographicexception-keyset-does-not-exist
+https://stackoverflow.com/questions/4896305/what-is-realm-in-iis-authentication-and-how-is-it-related-to-ssl-certificate-p
+
+
+----------------------------------------------------------------------------------------------
+How to make local certificate
+
+Install a tool: mkcert
+https://mkcert.org/	(It is just a general introduction)
+https://chocolatey.org/courses/installation/installing?method=installing-chocolatey?quiz=true	(In order to install mkcert, need the help of Chocolatey)
+@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+
+https://github.com/FiloSottile/mkcert	(install mkcert)
+choco install mkcert
+
+https://medium.com/@aweber01/locally-trusted-development-certificates-with-mkcert-and-iis-e09410d92031	(Generate certificate)
+The import password: changeit
+
+
+----------------------------------------------------------------------------------------------
+Deploy SSO
+
+1. Create an admin account 
+Go to the application pool,
+i.	Set 'Enable 32-Bit Applications' to be true.
+ii. 	Set Identity to be the admin account created above.
+iii.	Set 'Load User Profile' to be true. 
+
+2. Go mmc, find the certificate you use, right click, All tasks, manage private keys. Add the admin account created above.
+
+3. In the IIS site, select the root note right below Start Page.
+Double click Server Certificates under IIS.
+Double click the certificate you use, and select details.
+Get Subject Info
+like: 
+E = knight.yao@edenred.com
+CN = *.edenred.net
+OU = IT
+O = Edenred Pte Ltd
+L = Shanghai
+S = Shanghai
+C = CN
+
+Get Thumb Print Info, !! need to fill it in web.config (delete all of the space among strings.)
+like: ‎f3 e8 25 dc 37 c6 08 a8 f8 f4 1a 88 78 e0 dd d4 4c bb 07 55
+
+
+Change DB:
+select * from [dbo].[GlobalConfiguration]
+
+--UPDATE [dbo].[GlobalConfiguration]
+--SET IssuerUri = 'https://sso.edenred.net/ERAuth.IdentityServer.Web/'
+
+select * from [dbo].[KeyMaterialConfiguration]
+
+--update [dbo].[KeyMaterialConfiguration]
+--set SigningCertificateName = 'E=knight.yao@edenred.com, CN=*.edenred.net, OU=IT, O=Edenred Pte Ltd, L=Shanghai, S=Shanghai, C=CN'
+
+update [dbo].[KeyMaterialConfiguration]
+set SigningCertificateName = 
+'E=knight.yao@edenred.com, CN=tx-uat.preprod.edenred.net, OU=APAC Product, O=Edenred APAC, L=Shanghai, S=Shanghai, C=CN'
+
+update [dbo].[KeyMaterialConfiguration]
+set SymmetricSigningKey = N'‎d3e2444f1ba6b57937e5d75827267aa2ffd40ef3'   --This is thumb print
+
+SELECT * FROM [dbo].[RelyingParty]
+
+SELECT * FROM [dbo].[RelyingParty]
+WHERE Id = 1
+
+--UPDATE [dbo].[RelyingParty]
+--SET [Name] = 'https://sso.edenred.net/ERAuth.Admin.Web/'
+--,Realm = 'https://sso.edenred.net/ERAuth.Admin.Web/'
+--,ReplyTo = 'https://sso.edenred.net/ERAuth.Admin.Web/'
+--WHERE Id = 1
+
+select * from [dbo].[App]
+    <add key="ERAuth.AppName" value="ERAuthAdminWebApp" />
+    <add key="ERAuth.AppKey" value="secret" />
+    <add key="ERAuth.ServiceBaseUrl" value="https://txsso-test.preprod.edenred.net/ERAuth.ServiceHost/" />
+    <add key="ResourceLogPath" value="c:\temp\erauth.admin.web" />
+
+
+
+After set everything up, do not forget Add the new App to the current user and user roles.
+
+
+Add safety site:
+Setting -> Internet Options -> Security -> Trusted sites -> Sites -> Add sites.
+
+----------------------------------------------------------------------------------------------
+net use \\172.22.4.5\SG_ImagesSG /user:zwesgtxapweba01\SG_EV_WEB_MOADMSG "90BE$F%E**12C*7"
+robocopy F:\WWWRoot\SG_EV_WEB_MOADM\Upload\Original \\172.22.4.5\SG_ImagesSG /NP
+net use \\172.22.4.5\SG_ImagesSG /DEL
+
+
+----------------------------------------------------------------------------------------------
+Set to simplied Chinese
+https://jingyan.baidu.com/article/20095761683eed8b0621b406.html
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
