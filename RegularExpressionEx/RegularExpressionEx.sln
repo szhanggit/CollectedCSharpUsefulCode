@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.757
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegularExpressionEx", "RegularExpressionEx\RegularExpressionEx.csproj", "{B54ED0ED-4DD8-4918-9F00-6CCA98F10BE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BOL", "BOL\BOL.csproj", "{79508864-A27C-45C7-B636-2F318B86C693}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B54ED0ED-4DD8-4918-9F00-6CCA98F10BE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B54ED0ED-4DD8-4918-9F00-6CCA98F10BE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B54ED0ED-4DD8-4918-9F00-6CCA98F10BE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B54ED0ED-4DD8-4918-9F00-6CCA98F10BE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79508864-A27C-45C7-B636-2F318B86C693}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79508864-A27C-45C7-B636-2F318B86C693}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79508864-A27C-45C7-B636-2F318B86C693}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79508864-A27C-45C7-B636-2F318B86C693}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0B0F341C-91E1-4AF0-A256-E6CD26CF17A2}
+	EndGlobalSection
+EndGlobal
